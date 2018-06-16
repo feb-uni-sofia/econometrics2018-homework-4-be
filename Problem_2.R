@@ -7,8 +7,8 @@ str(crime)
 fit <- lm(C ~ HS, data = crime)
 summary(fit)
 ## seems like if there is 1% increase in people completing high school, 
-## the crime rate would increase with 1.486
-## if the percent of people completing high school is 0, then the crime rate would be -50.857
+## the (average) crime rate would increase with 1.486
+## if the percent of people completing high school is 0, then the crime rate would be -50.857... is a crime rate of -50.8 a reasonable figure????
 
 ## b)
 ggplot(data = crime, aes(x = HS, y = C)) +
@@ -36,3 +36,5 @@ fit2 <- lm(C ~ HS + U + I, data = crime)
 summary(fit2)
 ## ftest <- var.test(HS ~ I, data = crime, conf.level = 0.95)
 ## we haven't done F-tests in exercise so that's the best we've got :)
+## /score -2
+
